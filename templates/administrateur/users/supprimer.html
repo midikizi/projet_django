@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+Etes vous sur de vouloir supprimer l'utilisateur {{ username }}
+<p class="alert alert-success">{{ message }}</p> 
+<form method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <button type="submit" class="btn btn-danger"> supprimer</button>
+    <a class="btn btn-primary" href="{% url 'liste_utilisateur'  %}">cancel</a> 
+</form>
+
+{% endblock %}

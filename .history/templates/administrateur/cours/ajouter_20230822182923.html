@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Cour</title>
+</head>
+<body>
+    <div class="content-wrapper" style="margin-top:Opx">
+        <div class="content"><!-- For Components documentaion -->
+          <div class="card card-default">
+            <div class="px-6 py-4">
+              <div class="">
+                <div class="card-header py-3 px-0  align-items-center  justify-content-between border-bottom">
+                           
+                            <h4 class="fw-bold flex-fill mb-3" style="text-align: center; " >Ajouter un Cour</h4>
+                            <a href="{% url 'liste_cour' %}" style="width: 250px; margin-left:600px;margin-bottom:5px" class="btn btn-info"><strong style="font-size: 20px; ">Listes Cour</a>
+                            <p class="alert alert-success">{{ message }}</p> 
+                            <form method="post"   enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="col-12">
+                                    <div class="mb-2">
+                                    {{ form.as_p }}
+                                    </div>
+                                </div>    
+                                <button type="submit" class="btn btn-info">Enregistrer</button>
+                            </form>
+                       </div>  
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div>                       
+</body>
+</html>
+
+
+{% endblock %}

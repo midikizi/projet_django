@@ -1,0 +1,129 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="content-wrapper" style="margin-top: 0%;">
+  <div class="content"><!-- For Components documentaion -->
+    <div class="card card-default">
+      <div class="px-6 py-4">
+
+
+
+        <div class="">
+          <div class="card-header py-3 px-0  align-items-center  justify-content-between border-bottom">
+            <h3 class=" fw-bold flex-fill mb-3" style="border-bottom: 4px solid red; ">Administrateur</h3>
+            <p class=" alert-success">{{ message }}</p>
+            <a href="{% url 'liste_utilisateur' %}" style="width: 250px; margin-left:950px;margin-bottom:5px"
+              class="btn btn-info"><strong style="font-size: 20px; "></strong> Liste des users</a>
+            <form class="row g-1 p-0 p-4" action="{% url 'inscription' %}" method="POST">
+              {% csrf_token %}
+
+
+              <div class="col-12 text-center mb-5">
+                <h1>Inscription des utilisateur</h1>
+
+              </div>
+              {% if error %}
+
+              <p class="alert alert-danger">{{ message }}</p>
+              {% endif %}
+              <div class="col-12">
+                <div class="mb-2">
+                  <label for="role">Rôle:</label>
+                  <select id="role" name="role" class="form-control form-control-lg" required>
+                    <option value="Etudiant">Etudiant</option>
+                    <option value="Enseignant">Enseignant</option>
+
+                  </select><br>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Code</label>
+                  <input type="date" id="date_naissance" name="date" class="form-control form-control-lg" required><br>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Code</label>
+                  <input type="text" name="identifiant" class="form-control form-control-lg" />
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Nom</label>
+                  <input type="text" name="nom" class="form-control form-control-lg" placeholder="nom" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Prenom</label>
+                  <input type="text" name="prenom" class="form-control form-control-lg" placeholder="prenom" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Username</label>
+                  <input type="text" name="username" class="form-control form-control-lg" placeholder="username" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Email address</label>
+                  <input type="email" name="email" class="form-control form-control-lg"
+                    placeholder="name@example.com" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Password</label>
+                  <input type="password" name="password" class="form-control form-control-lg"
+                    placeholder="8+ characters required" />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="mb-2">
+                  <label class="form-label">Confirm password</label>
+                  <input type="password" name="confirmePassword" class="form-control form-control-lg"
+                    placeholder="8+ characters required" />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-2">
+                  <label class="form-label">Image Profil</label>
+                  <input type="file" name="image" class="form-control form-control-lg" />
+                </div>
+              </div>
+              <div class="col-12">
+
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-lg btn-block btn-success lift text-uppercase" alt="SIGNUP">
+                  SIGN UP
+                </button>
+              </div>
+
+            </form>
+            <!-- End Form -->
+            <div class="d-flex justify-content-between flex-wrap">
+              <div>
+                <a href="#" class="me-2 text-muted"><i class="fa fa-facebook-square fa-lg"></i></a>
+                <a href="#" class="me-2 text-muted"><i class="fa fa-github-square fa-lg"></i></a>
+                <a href="#" class="me-2 text-muted"><i class="fa fa-linkedin-square fa-lg"></i></a>
+                <a href="#" class="me-2 text-muted"><i class="fa fa-twitter-square fa-lg"></i></a>
+              </div>
+              <div>
+                <a href="#" title="home" class="me-2 text-muted">Home</a>
+                <a href="#" title="about" class="me-2 text-muted">About Us</a>
+                <a href="#" title="faq" class="me-2 text-muted">FAQs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Row -->
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

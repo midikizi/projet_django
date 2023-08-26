@@ -1,0 +1,422 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<body class="bg-light-gray" id="body">
+  <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh">
+  <div class="d-flex flex-column justify-content-between">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-xl-5 col-md-10 ">
+        <div class="card card-default mb-0">
+          <div class="card-header pb-0">
+            <div class="app-brand w-100 d-flex justify-content-center border-bottom-0">
+              <a class="w-auto pl-0" href="https://demo.themefisher.com/index.html">
+                <img src="images/logo.png" alt="Mono">
+                <span class="brand-name text-dark">MONO</span>
+              </a>
+            </div>
+          </div>
+          <div class="card-body px-5 pb-5 pt-0">
+            <h4 class="text-dark text-center mb-5">Sign Up</h4>
+            <form class="row g-1 p-0 p-4" action="{% url 'register' %}" method="POST">
+              {% csrf_token %}
+
+                
+                <div class="col-12 text-center mb-5">
+                  <h1>Create your account</h1>
+                  <span>Free access to our dashboard.</span>
+                </div>
+                {% if error %}
+
+                <p class="alert alert-danger">{{ message }}</p>
+                {% endif %}
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Date Naissance</label>
+                    <input type="date" id="date_naissance" name="date" class="form-control form-control-lg" required><br>
+                  </div>
+                </div>
+
+                
+                
+                <div class="col-6">
+                  <div class="mb-2">
+                    <label class="form-label">Nom</label>
+                    <input
+                      type="text"
+                      name="nom"
+                      class="form-control form-control-lg"
+                      placeholder="nom"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-2">
+                    <label class="form-label">Prenom</label>
+                    <input
+                      type="text"
+                      name="prenom"
+                      class="form-control form-control-lg"
+                      placeholder="prenom"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Username</label>
+                    <input
+                      type="text"
+                      name="username"
+                      class="form-control form-control-lg"
+                      placeholder="username"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Email address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control form-control-lg"
+                      placeholder="name@example.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control form-control-lg"
+                      placeholder="8+ characters required"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Confirm password</label>
+                    <input
+                      type="password"
+                      name="confirmePassword"
+                      class="form-control form-control-lg"
+                      placeholder="8+ characters required"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Image Profil</label>
+                    <input
+
+                      type="file"
+                      name="image"
+                      class="form-control form-control-lg"
+                      
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      I accept the
+                      <a
+                        href="#"
+                        title="Terms and Conditions"
+                        class="text-secondary"
+                        >Terms and Conditions</a
+                      >
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <button
+                    type="submit"
+                    class="btn btn-lg btn-block btn-light lift text-uppercase"
+                    alt="SIGNUP"
+                  >
+                    SIGN UP
+                  </button>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <span class="text-muted"
+                    >Already have an account?
+                    <a
+                      href="auth-signin.html"
+                      title="Sign in"
+                      class="text-secondary"
+                      >Sign in here</a
+                    ></span
+                  >
+                </div>
+
+
+
+
+
+               
+                  
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="elearn-layout" class="theme-black">
+  <!-- main body area -->
+  <div class="main p-2 py-3 p-xl-5">
+    <!-- Body: Body -->
+    <div class="body d-flex p-0 p-xl-5">
+      <div class="container-xxl">
+        <div class="row g-0">
+          <div
+            class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center rounded-lg auth-h100"
+          >
+            <div style="max-width: 25rem">
+              <div class="text-center mb-5">
+                <svg
+                  width="4rem"
+                  fill="none"
+                  class="bi bi-app-indicator"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    class="fill-primary"
+                    d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"
+                  />
+                  <path
+                    class="fill-primary"
+                    d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                  />
+                </svg>
+              </div>
+              <div class="mb-5">
+                <h2 class="color-900 text-center">
+                  Cloud-Based E-Learning Platform
+                </h2>
+              </div>
+              <!-- Image block -->
+              <div class="">
+                <img
+                  src="{% static 'assets/images/online-study.svg' %}"
+                  alt="online-study"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 d-flex justify-content-center align-items-center border-0 rounded-lg auth-h100"
+          >
+            <div
+              class="w-100 p-4 p-md-5 card border-0 bg-dark text-light"
+              style="max-width: 32rem"
+            >
+              <!-- Form -->
+
+              <form class="row g-1 p-0 p-4" action="{% url 'register' %}" method="POST">
+              {% csrf_token %}
+
+                
+                <div class="col-12 text-center mb-5">
+                  <h1>Create your account</h1>
+                  <span>Free access to our dashboard.</span>
+                </div>
+                {% if error %}
+
+                <p class="alert alert-danger">{{ message }}</p>
+                {% endif %}
+                <div class="col-12">
+                  <div class="mb-2">
+                  
+                  
+                  </div>
+                </div>  
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Date Naissance</label>
+                    <input type="date" id="date_naissance" name="date" class="form-control form-control-lg" required><br>
+                  </div>
+                </div>
+
+                
+                
+                <div class="col-6">
+                  <div class="mb-2">
+                    <label class="form-label">Nom</label>
+                    <input
+                      type="text"
+                      name="nom"
+                      class="form-control form-control-lg"
+                      placeholder="nom"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-2">
+                    <label class="form-label">Prenom</label>
+                    <input
+                      type="text"
+                      name="prenom"
+                      class="form-control form-control-lg"
+                      placeholder="prenom"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Username</label>
+                    <input
+                      type="text"
+                      name="username"
+                      class="form-control form-control-lg"
+                      placeholder="username"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Email address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control form-control-lg"
+                      placeholder="name@example.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control form-control-lg"
+                      placeholder="8+ characters required"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Confirm password</label>
+                    <input
+                      type="password"
+                      name="confirmePassword"
+                      class="form-control form-control-lg"
+                      placeholder="8+ characters required"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-2">
+                    <label class="form-label">Image Profil</label>
+                    <input
+
+                      type="file"
+                      name="image"
+                      class="form-control form-control-lg"
+                      
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      I accept the
+                      <a
+                        href="#"
+                        title="Terms and Conditions"
+                        class="text-secondary"
+                        >Terms and Conditions</a
+                      >
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <button
+                    type="submit"
+                    class="btn btn-lg btn-block btn-light lift text-uppercase"
+                    alt="SIGNUP"
+                  >
+                    SIGN UP
+                  </button>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <span class="text-muted"
+                    >Already have an account?
+                    <a
+                      href="auth-signin.html"
+                      title="Sign in"
+                      class="text-secondary"
+                      >Sign in here</a
+                    ></span
+                  >
+                </div>
+              </form>
+              <!-- End Form -->
+              <div class="d-flex justify-content-between flex-wrap">
+                <div>
+                  <a href="#" class="me-2 text-muted"
+                    ><i class="fa fa-facebook-square fa-lg"></i
+                  ></a>
+                  <a href="#" class="me-2 text-muted"
+                    ><i class="fa fa-github-square fa-lg"></i
+                  ></a>
+                  <a href="#" class="me-2 text-muted"
+                    ><i class="fa fa-linkedin-square fa-lg"></i
+                  ></a>
+                  <a href="#" class="me-2 text-muted"
+                    ><i class="fa fa-twitter-square fa-lg"></i
+                  ></a>
+                </div>
+                <div>
+                  <a href="#" title="home" class="me-2 text-muted">Home</a>
+                  <a href="#" title="about" class="me-2 text-muted">About Us</a>
+                  <a href="#" title="faq" class="me-2 text-muted">FAQs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

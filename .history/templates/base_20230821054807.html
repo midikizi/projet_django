@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    
+    <!-- plugin css file  -->
+    <link rel="stylesheet" href="{% static 'assets/css/carousel.min.css' %}" />
+    <!-- project css file  -->
+    <link rel="stylesheet" href="{% static 'assets/css/e-learn.style.min.css' %}">
+    <!-- Google Code  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-264428387-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-264428387-1');
+    </script>
+
+    <script src="{% static 'assets/bundles/libscripts.bundle.js' %}"></script>
+
+    <!-- Plugin Js-->
+    <script src="{% static 'assets/bundles/carousel.bundle.js' %}"></script>
+    <script src="{% static 'assets/bundles/apexcharts.bundle.js' %}"></script> 
+
+    <!-- Jquery Page Js -->
+    <script src="{% static 'js/template.js' %}"></script>
+    <script src="{% static 'js/page/elearn-index.js' %}"></script>
+</head>
+<body>
+  
+    {% if user.is_authenticated %} 
+      {% if user.role == "Administrateur" %}
+        {% include "_partiels/navAdministrateur.html" %}
+      {% elif user.role == "Enseignant" %}
+        {% include "_partiels/nav.html" %} 
+      {% else  %}
+        {% include "_partiels/navEtudiant.html" %}    
+      {% endif %}
+      
+      
+    {% endif %}
+
+
+  
+   
+    
+    {% block content %}{% endblock %}
+</body>
+</html>

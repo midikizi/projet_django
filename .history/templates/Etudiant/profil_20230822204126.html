@@ -1,0 +1,382 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container-xxl">
+        <div class="row g-3">
+            <div class="col-xl-8 col-lg-12 col-md-12">
+                <div class="card teacher-card  mb-3">
+                    <div class="card-body p-4 d-flex teacher-fulldeatil">
+                        <div class="profile-teacher pe-xl-4 pe-md-2 pe-sm-4 pe-4 text-center w220">
+                            <a href="#">
+                                <img src="{% static 'images/user/user-xs-01.jpg' %}" alt="{{ utilisateur.username }}"
+                                    class="avatar xl rounded-circle img-thumbnail shadow-sm">
+                            </a>
+                            <div class="about-info d-flex align-items-center mt-3 justify-content-center">
+                                <div class="followers me-2">
+                                    <i class="icofont-users color-careys-pink"></i>
+                                    <span class="">55k</span>
+                                </div>
+                                <div class="star me-2">
+                                    <i class="icofont-star text-warning"></i>
+                                    <span class="">4.5</span>
+                                </div>
+                                <div class="own-video">
+                                    <i class="icofont-video color-light-orange"></i>
+                                    <span class="">10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teacher-info border-start ps-xl-4 ps-md-2 ps-sm-4 ps-4 w-100">
+                            <h6 class="mb-0 mt-2  fw-bold">{{ utilisateur.first_name }} &nbsp;&nbsp; {{ utilisateur.last_name }}</h6>
+                            <span class="text-uppercase small text-muted">Etudiant {{ utilisateur.username }}</span>
+                            <p class="small text-muted">The purpose of lorem ipsum is to create a natural looking block
+                                of text (sentence,
+                                paragraph, page, etc.) that doesn't distract from the layout. A practice not without
+                                controversy, laying out
+                                pages with meaningless filler text can be very useful when the focus is meant to be on
+                                design, not content.</p>
+                            <div class="video-setting-icon mt-3 pt-3 border-top">
+                                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                    <a href="{% url 'profil_modifier' utilisateur.id %}" type="button" class="btn btn-success"  style="font-size: 20px; color:white;"><i
+                                            class="icofont-mic color-defult-white"></i>modifier</a>
+                                    
+                                </div>
+                            </div>
+                            <ul class="social mb-0 list-inline d-flex mt-3">
+                                <li><a href="#" class="avatar btn btn-link"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="avatar btn btn-link"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="avatar btn btn-link"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#" class="avatar btn btn-link"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="mb-0 fw-bold  py-3">Vos Informations </h6>
+                <div class="teachercourse-list mb-3">
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w120"><p><strong  style="font-size: 20px;">votre Email</strong></p></div>
+                                        <div class="flex-fill ms-3 text-truncate">
+                                            <h4 class="mb-0  fs-6 text-truncate">{{ utilisateur.email }}</h4>
+                                            <div class="d-flex align-items-center">
+                                                <span class="mb-2 me-3">
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-half text-warning"></i></a>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex align-items-center flex-wrap">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column text-center">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w120"><p><strong  style="font-size: 20px;">Username </strong></p></div>
+                                        <div class="flex-fill ms-3 text-truncate">
+                                            <h4 class="mb-0  fs-6 text-truncate">{{ utilisateur.username }}</h4>
+                                            <div class="d-flex align-items-center">
+                                                <span class="mb-2 me-3">
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-half text-warning"></i></a>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex align-items-center flex-wrap">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column text-center">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w120"><p><strong style="font-size: 20px;">Date naissance </strong></p></div>
+                                        <div class="flex-fill ms-3 text-truncate">
+                                            <h4 class="mb-0  fs-6 text-truncate">{{ utilisateur.birthdate }} </h4>
+                                            <div class="d-flex align-items-center">
+                                                <span class="mb-2 me-3">
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-half text-warning"></i></a>
+                                                    <a href="#" class="rating-link "><i
+                                                            class="bi bi-star-fill color-400"></i></a>
+
+                                                </span>
+                                            </div>
+                                            <div class="d-flex align-items-center flex-wrap">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column text-center">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w120"><p><strong  style="font-size: 20px;">Role</strong></p></div>
+                                        <div class="flex-fill ms-3 text-truncate">
+                                            <h4 class="mb-0  fs-6 text-truncate" ><h3 class="badge bg-success"  style="font-size: 20px;">{{ utilisateur.role }}</h3></h4>
+                                            <div class="d-flex align-items-center">
+                                                <span class="mb-2 me-3">
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-fill text-warning"></i></a>
+                                                    <a href="#" class="rating-link active"><i
+                                                            class="bi bi-star-half text-warning"></i></a>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex align-items-center flex-wrap">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column text-center">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+                <div class="card mb-3">
+                    <div class="card-header py-3">
+                        <h6 class="mb-0 fw-bold ">Mon nom d'utilisateur est : {{ utilisateur.username }} </h6>
+                    </div>
+                    <div class="card-body">
+                        <div id="apex-radar-multiple-series" class="line-color"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header py-3">
+                        
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-4">
+                            <li class="card mb-2">
+                                <div class="card-body p-lg-4 p-3">
+                                    <div class="d-flex mb-3 pb-3 border-bottom flex-wrap">
+                                        
+                                    </div>
+                                    <div class="timeline-item-post">
+                                        
+                                </div>
+                            </li> <!-- .Card End -->
+                            <li class="card mb-2">
+                                <div class="card-body p-lg-4 p-3">
+                                    
+                                </div>
+                            </li> <!-- .Card End -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Members-->
+<div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  fw-bold" id="addUserLabel">Invite Friend's</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="inviteby_email">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Members Invite"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-dark" type="button" id="button-addon2">Members Invite</button>
+                    </div>
+                </div>
+                <div class="members_list">
+                    <h6 class="fw-bold ">Members of e-Learn</h6>
+                    <ul class="list-unstyled list-group list-group-custom list-group-flush mb-0">
+                        <li class="list-group-item py-3">
+                            <div class="d-flex align-items-center">
+                                <div class="no-thumbnail">
+                                    <img class="avatar lg rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                </div>
+                                <div class="flex-fill ms-3 text-truncate">
+                                    <h6 class="mb-0  fw-bold">Rachel Carr(you)</h6>
+                                    <span class="text-muted">rachel.carr@gmail.com</span>
+                                </div>
+                                <div class="members-action">
+                                    <span class="members-role ">Admin</span>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn bg-transparent dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="icofont-ui-settings  fs-6"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="icofont-ui-password fs-6 me-2"></i>ResetPassword</a></li>
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="icofont-chart-line fs-6 me-2"></i>ActivityReport</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <div class="d-flex align-items-center">
+                                <div class="no-thumbnail">
+                                    <img class="avatar lg rounded-circle" src="assets/images/xs/avatar3.jpg" alt="">
+                                </div>
+                                <div class="flex-fill ms-3 text-truncate">
+                                    <h6 class="mb-0  fw-bold">Lucas Baker<a href="#" class="link-secondary ms-2">(Resend
+                                            invitation)</a></h6>
+                                    <span class="text-muted">lucas.baker@gmail.com</span>
+                                </div>
+                                <div class="members-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn bg-transparent dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Members
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="icofont-check-circled"></i>
+                                                    Member
+                                                    <span>Can view, edit, delete, comment on and save files</span>
+                                                </a>
+
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="fs-6 p-2 me-1"></i>
+                                                    Admin
+                                                    <span>Member, but can invite and manage team members</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn bg-transparent dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="icofont-ui-settings  fs-6"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="icofont-delete-alt fs-6 me-2"></i>Delete Member</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item py-3">
+                            <div class="d-flex align-items-center">
+                                <div class="no-thumbnail">
+                                    <img class="avatar lg rounded-circle" src="assets/images/xs/avatar8.jpg" alt="">
+                                </div>
+                                <div class="flex-fill ms-3 text-truncate">
+                                    <h6 class="mb-0  fw-bold">Una Coleman</h6>
+                                    <span class="text-muted">una.coleman@gmail.com</span>
+                                </div>
+                                <div class="members-action">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn bg-transparent dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Members
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="icofont-check-circled"></i>
+                                                    Member
+                                                    <span>Can view, edit, delete, comment on and save files</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="fs-6 p-2 me-1"></i>
+                                                    Admin
+                                                    <span>Member, but can invite and manage team members</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn bg-transparent dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="icofont-ui-settings  fs-6"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="icofont-ui-password fs-6 me-2"></i>ResetPassword</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="icofont-chart-line fs-6 me-2"></i>ActivityReport</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="icofont-delete-alt fs-6 me-2"></i>Suspend member</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="icofont-not-allowed fs-6 me-2"></i>Delete Member</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
